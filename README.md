@@ -12,7 +12,7 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 
 > ###### If it's your first time using replaX or you just haven't run it on your current project yet
 
-	1. Press the **Create new .csv for translation** button.
+	1. Press the "Create new .csv for translation" button.
 
 	2. Upload your .html file to extract all of the text nodes into a .csv file.
 
@@ -29,7 +29,7 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 
 > ###### If you've already got a translated .csv file of the extracted text nodes from your project
 
-	1. Press the **Upload already translated .csv** button.
+	1. Press the "Upload already translated .csv" button.
 
 	2. Upload the .html file from which you extracted the texts for translation.
 	

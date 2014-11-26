@@ -22,9 +22,11 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 	
 	5. Upload the translated .csv file.
 	
-	6. You are all done! Copy the output or download the .html file containing the replaced and merged texts.
+	6. You are all done!Copy the output or download the .html file containing the replaced and merged texts.
+
 
 ***
+
 
 > ###### If you've already got a translated .csv file of the extracted text nodes from your project
 

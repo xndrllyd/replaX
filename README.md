@@ -1,4 +1,4 @@
-# [![replaX](assets/images/logo.png)][logo]
+# [![replaX](assets/images/logo/logo.png)][logo]
 [logo]: http://flcalx.github.io/replaX/
 
 Replace with ease all text nodes within an HTML file - useful when you've got to make an email template in multiple languages, saves time and energy on the copy-paste action...

@@ -6,7 +6,7 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 - Web site: <http://flcalx.github.io/replaX/>
 - How to use:
 	- [Create new .csv for translation](#if-its-your-first-time-using-replax-or-you-just-havent-run-it-on-your-current-project-yet)
-	- [Upload already translated .csv](##if-youve-already-got-a-translated-csv-file-of-the-extracted-text-nodes-from-your-project)
+	- [Upload already translated .csv](#if-youve-already-got-a-translated-csv-file-of-the-extracted-text-nodes-from-your-project)
 
 ### How to use
 

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>replaX</title>
+    
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/vendor/codemirror-3.0/lib/codemirror.css">
+    <link rel="stylesheet" href="assets/vendor/codemirror-3.0/theme/ambiance.css">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="assets/vendor/codemirror-3.0/lib/codemirror.js"></script>
+    <script src="assets/vendor/codemirror-3.0/lib/util/formatting.js"></script>
+    <script src="assets/vendor/codemirror-3.0/mode/css/css.js"></script>
+    <script src="assets/vendor/codemirror-3.0/mode/xml/xml.js"></script>
+    <script src="assets/vendor/codemirror-3.0/mode/javascript/javascript.js"></script>
+    <script src="assets/vendor/codemirror-3.0/mode/htmlmixed/htmlmixed.js"></script>
+  </head>
+  <body>
+    
+    <!-- <NAVIGATION> -->
+    <nav>
+      <ul id="progressbar">
+        <li class="active">start</li>
+        <li>Upload HTML</li>
+        <li class="downloadcsv">Download CSV</li>
+        <li>Upload CSV</li>
+        <li><img src="assets/images/logo-progressbar.png" alt="replaX" /></li>
+      </ul>
+    </nav>
+    <!-- </NAVIGATION> -->
+    
+    <!-- <FORM> -->
+    <form id="msform">
+      <fieldset class="fs-step-1">
+        <h2 class="fs-title">
+          Create or upload your
+          <br />
+          <span>translation file</span>
+        </h2>
+        <h3 class="fs-subtitle">If you already have a translated .csv file in <img src="assets/images/logo-subtitle.png" alt="replaX" />'s format then all you have to do is choose "Upload already translated .csv" to replace the texts within the HTML, otherwise click on "Create new .csv for translation" and follow the steps.</h3>
+        <input type="button" name="create" class="next action-button" value="Create new .csv for translation" />
+        <input type="button" name="upload" class="next action-button action-button-alt" value="Upload already translated .csv" />
+      </fieldset>
+
+      <fieldset class="fs-step-2">
+        <h2 class="fs-title">
+          Upload your <span>html base</span> file</h2>
+        <h3 class="fs-subtitle">Drag and drop or choose file</h3>
+        <input type="file" id="uploadhtml" accept=".html" />
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next next2 action-button" value="Next" disabled />
+      </fieldset>
+
+      <fieldset class="fs-step-3">
+        <h2 class="fs-title">Download your <span>ready-for-translation csv</span> file</h2>
+        <h3 class="fs-subtitle">Click button below to download file</h3>
+        <a href="" class="download action-button action-button-alt" download="EN.csv">Download File</a>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next next2 action-button" value="Next" disabled />
+      </fieldset>
+
+      <fieldset class="fs-step-4">
+        <h2 class="fs-title">Upload your <span>translated csv</span> file</h2>
+        <h3 class="fs-subtitle">Drag and drop or choose file</h3>
+        <input type="file" id="uploadcsv" accept=".csv" />
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="run" class="run next next2 action-button action-button-alt" value="Run" disabled/>
+      </fieldset>
+
+      <fieldset class="fs-step-5">
+        <h2 class="fs-title">There you go</h2>
+        <h3 class="fs-subtitle">Copy outputed HTML or download file</h3>
+        <div id="result"></div>
+        <a href="" class="download action-button" download="replaX.html">Download File</a>
+      </fieldset>
+    </form>
+    <!-- /FORM -->
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

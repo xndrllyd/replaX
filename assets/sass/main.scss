@@ -162,11 +162,12 @@ nav {
 			}
 
 			&.previous,
-			&.next2 {
-				width: 48%;
+			&.half,
+			&.half-alt {
+				width: 48% !important;
 			}
 
-			&.next2 {
+			&.half {
 				margin-left: 6px;
 			}
 
@@ -193,10 +194,17 @@ nav {
 
 			&.download {
 				width: 100%;
-				margin: 0 0 10px;
 				display: block;
-				
-				@include border-radius(0 0 3px 3px);
+			}
+			
+			&.result {
+				margin-bottom: 0;
+				display: inline-block;
+			}
+
+			&.result,
+			&.download {				
+				@include border-radius(3px);
 
 				&:link,
 				&:visited {

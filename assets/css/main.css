@@ -289,15 +289,15 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
 #msform fieldset .action-button:hover, #msform fieldset .action-button:focus, #msform fieldset .action-button:active {
   background: #2c3e50;
 }
-/* line 165, ../sass/main.scss */
-#msform fieldset .action-button.previous, #msform fieldset .action-button.next2 {
-  width: 48%;
+/* line 166, ../sass/main.scss */
+#msform fieldset .action-button.previous, #msform fieldset .action-button.half, #msform fieldset .action-button.half-alt {
+  width: 48% !important;
 }
-/* line 169, ../sass/main.scss */
-#msform fieldset .action-button.next2 {
+/* line 170, ../sass/main.scss */
+#msform fieldset .action-button.half {
   margin-left: 6px;
 }
-/* line 173, ../sass/main.scss */
+/* line 174, ../sass/main.scss */
 #msform fieldset .action-button.action-button-alt {
   padding: 7px 5px;
   color: #ff335e;
@@ -305,33 +305,40 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
   background: white;
   box-sizing: border-box;
 }
-/* line 182, ../sass/main.scss */
+/* line 183, ../sass/main.scss */
 #msform fieldset .action-button.action-button-alt:hover, #msform fieldset .action-button.action-button-alt:focus, #msform fieldset .action-button.action-button-alt:active {
   color: #2c3e50;
   border: 3px solid #2c3e50;
 }
-/* line 187, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 #msform fieldset .action-button.action-button-alt:disabled {
   color: #ffe5eb;
   border-color: #ffe5eb;
   background: white;
 }
-/* line 194, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 #msform fieldset .action-button.download {
   width: 100%;
-  margin: 0 0 10px;
   display: block;
-  -webkit-border-radius: 0 0 3px 3px;
-  -moz-border-radius: 0 0 3px 3px;
-  -ms-border-radius: 0 0 3px 3px;
-  -o-border-radius: 0 0 3px 3px;
-  border-radius: 0 0 3px 3px;
 }
-/* line 202, ../sass/main.scss */
-#msform fieldset .action-button.download:link, #msform fieldset .action-button.download:visited {
+/* line 200, ../sass/main.scss */
+#msform fieldset .action-button.result {
+  margin-bottom: 0;
+  display: inline-block;
+}
+/* line 206, ../sass/main.scss */
+#msform fieldset .action-button.result, #msform fieldset .action-button.download {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 210, ../sass/main.scss */
+#msform fieldset .action-button.result:link, #msform fieldset .action-button.result:visited, #msform fieldset .action-button.download:link, #msform fieldset .action-button.download:visited {
   text-decoration: none;
 }
-/* line 207, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 #msform fieldset .action-button:disabled {
   cursor: default;
   background: #ffe5eb;

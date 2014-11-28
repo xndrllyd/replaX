@@ -67,7 +67,7 @@
         <span>OR</span>
         <textarea id="pastehtml" placeholder="Paste your HTML here"></textarea>
         <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="next" class="next next2 action-button" value="Next" disabled />
+        <input type="button" name="next" class="next half action-button" value="Next" disabled />
       </fieldset>
 
       <fieldset class="fs-step-3">
@@ -87,7 +87,7 @@
         <span>OR</span>
         <textarea id="copycsv"></textarea>
         <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="next" class="next next2 action-button" value="Next" disabled />
+        <input type="button" name="next" class="next half action-button" value="Next" disabled />
       </fieldset>
 
       <fieldset class="fs-step-4">
@@ -95,14 +95,15 @@
         <h3 class="fs-subtitle">Drag and drop or choose file</h3>
         <input type="file" id="uploadcsv" accept=".csv" />
         <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="run" class="run next next2 action-button action-button-alt" value="Run" disabled/>
+        <input type="button" name="run" class="run next half action-button action-button-alt" value="Run" disabled/>
       </fieldset>
 
       <fieldset class="fs-step-5">
         <h2 class="fs-title">There you go</h2>
         <h3 class="fs-subtitle">Copy outputed HTML or download file</h3>
         <div id="result"></div>
-        <a href="" class="download action-button" download="replaX.html">Download File</a>
+        <a href="" class="result half-alt download action-button" download="replaX.html">Download File</a>
+        <a href="" class="result half half preview action-button action-button-alt" target="_blank">Preview</a>
       </fieldset>
     </form>
     <!-- /FORM -->

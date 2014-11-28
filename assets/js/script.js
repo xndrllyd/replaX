@@ -199,6 +199,7 @@ $(".download").click(function() {
 $(".run").click(function() {
   editor.setValue($.trim(htmlData));
   editor.autoFormatRange({line:0, ch:0}, {line:editor.lineCount()-1, ch:0});
+  $(".preview").attr('href', "data:text/html;charset=UTF-8," + encodeURIComponent(htmlData));
   editor.execCommand("selectAll");
   editor.focus();
 });

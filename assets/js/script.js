@@ -24,9 +24,7 @@ $("#uploadcsv").change(function(e) {
     reader.onload = function(e) {
       var csvData = e.target.result.split(',\n');
 
-      for (var i = 0; i < txt.length; i++) {
-        htmlData = htmlData.replace(txt[i].replace(/\"/g,''), csvData[i].replace(/\"/g,''));
-      };
+      replaceTextNodes(csvData);
     };
 
     reader.onerror = function() {
@@ -35,6 +33,19 @@ $("#uploadcsv").change(function(e) {
   };
 
   return false;
+});
+
+$("#pastecsv").on('input', function() {
+  if ($.trim(this.value).length != 0) {
+    $(this).siblings('.run').removeAttr('disabled');
+
+    var csvData = this.value.split('\n');
+
+    replaceTextNodes(csvData);
+
+  } else {
+    $(this).siblings('.next').attr('disabled', 'disabled');
+  };
 });
 
 $("#uploadhtml").change(function(e) {
@@ -216,14 +227,24 @@ function extractTextNodes(elms) {
   });
 
   for (var i = 0; i < txt.length; i++) {
-    if (txt[i].indexOf(",") != -1 || txt[i].indexOf('\n') != -1) {
+    if (txt[i].indexOf(",") != -1) {
       txt[i] = '"' + txt[i] + '"';
-    }
+    };
+
+    if (txt[i].indexOf('\n') != -1) {
+      txt[i] = txt[i].replace(/\n/g, '');
+    };
   };
 
   if (uploadcsv == false) {
     setTimeout(function() {        
       $('.fs-step-3').find('textarea').val(txt.join('\n')).select();
     }, 801);
+  };
+};
+
+function replaceTextNodes(csvData) {
+  for (var i = 0; i < txt.length; i++) {
+    htmlData = htmlData.replace(txt[i].replace(/\"/g,''), csvData[i].replace(/\"/g,''));
   };
 };

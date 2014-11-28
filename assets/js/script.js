@@ -25,7 +25,7 @@ $("#uploadcsv").change(function(e) {
       var csvData = e.target.result.split(',\n');
 
       for (var i = 0; i < txt.length; i++) {
-        htmlData = htmlData.replace(txt[i], csvData[i]);
+        htmlData = htmlData.replace(txt[i].replace(/\"/g,''), csvData[i].replace(/\"/g,''));
       };
     };
 
@@ -76,8 +76,10 @@ $("#pastehtml").on('input', function() {
   } else {
     $(this).siblings('.next').attr('disabled', 'disabled');
   };
+});
 
-  return false;
+$("#copycsv").on('copy', function() {
+  $(this).siblings('.next').removeAttr('disabled');
 });
 
 $(".next").click(function() {
@@ -185,8 +187,6 @@ $(".previous").click(function() {
 
 $(".download").click(function() {
   if ($(this).parent().hasClass('fs-step-3')) {
-    var tmp = [];
-    
     this.download = filename;
     this.href = "data:text/csv;charset=UTF-8,"  + encodeURIComponent(txt.join(',\n'));
     
@@ -213,4 +213,16 @@ function extractTextNodes(elms) {
       });
     };
   });
+
+  for (var i = 0; i < txt.length; i++) {
+    if (txt[i].indexOf(",") != -1 || txt[i].indexOf('\n') != -1) {
+      txt[i] = '"' + txt[i] + '"';
+    }
+  };
+
+  if (uploadcsv == false) {
+    setTimeout(function() {        
+      $('.fs-step-3').find('textarea').val(txt.join('\n')).select();
+    }, 801);
+  };
 };

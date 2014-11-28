@@ -319,7 +319,7 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
 /* line 194, ../sass/main.scss */
 #msform fieldset .action-button.download {
   width: 100%;
-  margin: 0;
+  margin: 0 0 10px;
   display: block;
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;

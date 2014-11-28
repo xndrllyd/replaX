@@ -122,7 +122,8 @@ nav {
 			color: #666;
 		}
 
-		input {
+		input,
+		textarea {
 			width: 100%;
 			margin-bottom: 10px;
 			padding: 40px;
@@ -132,6 +133,14 @@ nav {
 			border: 5px dashed #CCC;
 			
 			@include border-radius(3px);
+		}
+
+		textarea {
+			max-height: 46px;
+			margin-top: 10px;
+			padding: 10px;
+			resize: none;
+			border-style: solid;
 		}
 
 		.action-button {

@@ -51,20 +51,28 @@ $("#uploadhtml").change(function(e) {
       
       htmlData = e.target.result;
 
-      elms.contents().filter(function() {  
-        if (this.nodeType === 3) {
-          txt.push(this.nodeValue);
-
-          txt = $.grep(txt, function(v, i) {
-            return txt[i] = $.trim(v);
-          });
-        };
-      });
+      extractTextNodes(elms);
     };
 
     reader.onerror = function() {
       alert('Unable to read ' + file.fileName);
     };
+  };
+
+  return false;
+});
+
+$("#pastehtml").on('input', function() {
+  if ($.trim(this.value).length != 0) {
+    $(this).siblings('.next').removeAttr('disabled');
+
+    var elms = $(this.value).find('*');
+
+    htmlData = this.value;
+
+    extractTextNodes(elms);
+  } else {
+    $(this).siblings('.next').attr('disabled', 'disabled');
   };
 
   return false;
@@ -186,8 +194,20 @@ $(".download").click(function() {
 });
 
 $(".run").click(function() {
-  editor.setValue(htmlData);
+  editor.setValue($.trim(htmlData));
   editor.autoFormatRange({line:0, ch:0}, {line:editor.lineCount()-1, ch:0});
   editor.execCommand("selectAll");
   editor.focus();
 });
+
+function extractTextNodes(elms) {
+  elms.contents().filter(function() {  
+    if (this.nodeType === 3) {
+      txt.push(this.nodeValue);
+
+      txt = $.grep(txt, function(v, i) {
+        return txt[i] = $.trim(v);
+      });
+    };
+  });
+};

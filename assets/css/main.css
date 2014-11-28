@@ -246,8 +246,9 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
   font-size: 13px;
   color: #666;
 }
-/* line 125, ../sass/main.scss */
-#msform fieldset input {
+/* line 126, ../sass/main.scss */
+#msform fieldset input,
+#msform fieldset textarea {
   width: 100%;
   margin-bottom: 10px;
   padding: 40px;
@@ -261,7 +262,15 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 137, ../sass/main.scss */
+/* line 138, ../sass/main.scss */
+#msform fieldset textarea {
+  max-height: 46px;
+  margin-top: 10px;
+  padding: 10px;
+  resize: none;
+  border-style: solid;
+}
+/* line 146, ../sass/main.scss */
 #msform fieldset .action-button {
   width: 100%;
   margin: 10px 0;
@@ -276,19 +285,19 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 151, ../sass/main.scss */
+/* line 160, ../sass/main.scss */
 #msform fieldset .action-button:hover, #msform fieldset .action-button:focus, #msform fieldset .action-button:active {
   background: #2c3e50;
 }
-/* line 156, ../sass/main.scss */
+/* line 165, ../sass/main.scss */
 #msform fieldset .action-button.previous, #msform fieldset .action-button.next2 {
   width: 48%;
 }
-/* line 160, ../sass/main.scss */
+/* line 169, ../sass/main.scss */
 #msform fieldset .action-button.next2 {
   margin-left: 6px;
 }
-/* line 164, ../sass/main.scss */
+/* line 173, ../sass/main.scss */
 #msform fieldset .action-button.action-button-alt {
   padding: 7px 5px;
   color: #ff335e;
@@ -296,18 +305,18 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
   background: white;
   box-sizing: border-box;
 }
-/* line 173, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 #msform fieldset .action-button.action-button-alt:hover, #msform fieldset .action-button.action-button-alt:focus, #msform fieldset .action-button.action-button-alt:active {
   color: #2c3e50;
   border: 3px solid #2c3e50;
 }
-/* line 178, ../sass/main.scss */
+/* line 187, ../sass/main.scss */
 #msform fieldset .action-button.action-button-alt:disabled {
   color: #ffe5eb;
   border-color: #ffe5eb;
   background: white;
 }
-/* line 185, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 #msform fieldset .action-button.download {
   width: 100%;
   margin: 0;
@@ -318,11 +327,11 @@ nav #progressbar li.active:before, nav #progressbar li.active:after {
   -o-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
-/* line 193, ../sass/main.scss */
+/* line 202, ../sass/main.scss */
 #msform fieldset .action-button.download:link, #msform fieldset .action-button.download:visited {
   text-decoration: none;
 }
-/* line 198, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 #msform fieldset .action-button:disabled {
   cursor: default;
   background: #ffe5eb;

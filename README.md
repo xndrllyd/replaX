@@ -22,7 +22,7 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 	
 	4. Translate the texts or pass the .csv file to your translation team.
 	
-	5. Upload the translated .csv file.
+	5. Upload the translated .csv file or copy in the changed texts.
 	
 	6. You are all done!
 	   Copy the output or download the .html file containing the replaced and merged texts.
@@ -37,7 +37,7 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 	2. Upload the .html file or copy-paste its contents into the according input
 	   to replace all of the text nodes from a .csv file.
 	
-	3. Upload the translated .csv file.
+	3. Upload the translated .csv file or copy in the changed texts.
 	
 	4. You are all done!
 	   Copy the output or download the .html file containing the replaced and merged texts.

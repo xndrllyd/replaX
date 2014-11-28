@@ -18,7 +18,7 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 	2. Upload your .html file or copy-paste its contents into the according input
 	   to extract all of the text nodes into a .csv file.
 
-	3. Download the ready-for-translation .csv file.
+	3. Download the ready-for-translation .csv file or copy the texts into Excel.
 	
 	4. Translate the texts or pass the .csv file to your translation team.
 	

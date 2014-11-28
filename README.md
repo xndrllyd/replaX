@@ -26,6 +26,7 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 	
 	6. You are all done!
 	   Copy the output or download the .html file containing the replaced and merged texts.
+	   (You can also preview it in the browser)
 
 ***
 
@@ -40,3 +41,4 @@ Replace with ease all text nodes within an HTML file - useful when you've got to
 	
 	4. You are all done!
 	   Copy the output or download the .html file containing the replaced and merged texts.
+	   (You can also preview it in the browser)

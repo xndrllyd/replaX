@@ -1,7 +1,7 @@
 var htmlData, txt = [];
 var current_fs, next_fs, previous_fs;
 var left, opacity, scale, animating;
-var uploadcsv = false;
+var uploadcsv = false, filename;
 
 var editor = CodeMirror(document.getElementById("result"), {
   mode: 'text/html',
@@ -42,13 +42,15 @@ $("#uploadhtml").change(function(e) {
     var file = e.target.files[0],
         reader = new FileReader();
 
+    filename = file.name.replace(/(\.htm)l?/ig, "");
+
     $(this).siblings('.next').removeAttr('disabled');
 
     reader.readAsText(file);
 
     reader.onload = function(e) {
       var elms = $(e.target.result).find('*');
-      
+
       htmlData = e.target.result;
 
       extractTextNodes(elms);
@@ -184,7 +186,8 @@ $(".previous").click(function() {
 $(".download").click(function() {
   if ($(this).parent().hasClass('fs-step-3')) {
     var tmp = [];
-  
+    
+    this.download = filename;
     this.href = "data:text/csv;charset=UTF-8,"  + encodeURIComponent(txt.join(',\n'));
     
     $(this).siblings('.next').removeAttr('disabled');

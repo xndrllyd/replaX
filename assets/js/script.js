@@ -127,6 +127,8 @@ $(".next").click(function() {
     setTimeout(function() {
       $("#progressbar li").width('20%');
       $("#progressbar li.downloadcsv").show();
+
+      $("#copycsv").select();
     }, 400);
   };
 
@@ -234,12 +236,10 @@ function extractTextNodes(elms) {
     if (txt[i].indexOf('\n') != -1) {
       txt[i] = txt[i].replace(/\n/g, '');
     };
-  };
 
-  if (uploadcsv == false) {
-    setTimeout(function() {        
-      $('.fs-step-3').find('textarea').val(txt.join('\n')).select();
-    }, 801);
+    if (uploadcsv == false) {       
+      $("#copycsv").val(txt.join('\n'));
+    };
   };
 };
 

@@ -1,9 +1,9 @@
 # [![replaX](assets/images/logo/logo.png)][logo]
-[logo]: http://flcalx.github.io/replaX/
+[logo]: http://alexislloyd91.github.io/replaX/
 
 Replace with ease all text nodes within an HTML file - useful when you've got to make an email template in multiple languages, saves time and energy on the copy-paste action...
 
-- Web site: <http://flcalx.github.io/replaX/>
+- Web site: <http://alexislloyd91.github.io/replaX/>
 - How to use:
 	- [Create new .csv for translation](#if-its-your-first-time-using-replax-or-you-just-havent-run-it-on-your-current-project-yet)
 	- [Upload already translated .csv](#if-youve-already-got-a-translated-csv-file-of-the-extracted-text-nodes-from-your-project)
